@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static%}
+
+{% block content %}
+
+<head>
+    <style>
+        table, th, td {
+        border:1px solid black;
+        border-collapse: collapse;
+    
+        }
+    
+        th, td {
+        padding: 20px;
+    
+        }
+        .main-container{
+            width:800px;
+            margin: auto;
+
+        }   
+        </style>
+</head>
+<h3 style="text-align:center ;">Job Openings</h3>
+<div class="main-container">
+    <div class="positions">
+        <table style="width:100%;">
+            <tr>
+                <th>Name of Company</th>
+                <th>Position</th>
+                <th>job_description</th>
+                <th>Location</th>
+                <th>Experience</th>
+                <th>Apply</th>
+            </tr>
+            {% for c in company %}
+                <tr>
+                    <td>{{c.name}}</td>
+                    <td>{{c.position}}</td>
+                    <td>{{c.job_description}}</td>
+                    <td>{{c.location}}</td>
+                    <td>{{c.experience}}</td>
+                    <td><a class = "apply"  href="{% url 'apply' c.id %}">Apply</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+    </div>        
+
+</div>
+{% endblock %}

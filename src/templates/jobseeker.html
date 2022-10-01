@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static%}
+
+{% block content %}
+<head>
+    <style>
+        table, th, td {
+        border:1px solid black;
+        border-collapse: collapse;
+        }
+    
+        th, td {
+        padding: 10px;
+        }
+    </style>
+<head>
+
+<H3 style="text-align: center;">Prospective Employees</H3>
+    
+<table style="width:100%;">
+    <tr>
+        <th>Name</th>
+        <th>DOB</th>
+        <th>Resume</th>
+        <th>Gender</th>
+        <th>Mobile</th>
+        <th>Email</th>
+        <th>Organization</th>
+    </tr>
+    {% for c in candidate%}
+        <tr>
+            <td>{{c.name}}</td>
+            <td>{{c.date_of_birth}}</td>
+            {% if c.resume %}
+            <td><a href='{{c.resume.url}}' download >{{c.resume}}</td></a></td>
+            {% else %}
+            <td>Not submitted</td>
+            {% endif %}
+            <td>{{c.gender}}</td>
+            <td>{{c.phone_number}}</td>
+            <td>{{c.email}}</td>
+            <td>{{c.company}}</td>
+        </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}
