@@ -10,6 +10,4 @@ The Company should sign in to see various candidates that have aplied for a posi
 ![image](https://user-images.githubusercontent.com/57483187/193424141-e6c2bc95-eeae-4e3c-b2ea-3ceedc084078.png)
 
 A candidate can apply for any position in the home page(no sign-up is required)
-![image](https://user-images.githubusercontent.com/57483187/193424413-2838e2c2-16ef-4e87-9d94-ac12430d21ad.png)
-
-
+![image](https://user-images.githubusercontent.com/57483187/193424490-5adb78ae-1861-435c-8365-83ff84404246.png)
