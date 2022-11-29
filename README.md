@@ -1,5 +1,4 @@
-# job_portal
-This is a simple python-django project. 
+# job_portal 
 The aim of this project is to create a webpage where various Companies/Employees can post job openings.
 The Company should sign in to see various candidates that have aplied for a position in their respective company.
                                           sign up
